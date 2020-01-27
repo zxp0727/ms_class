@@ -11,5 +11,19 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: true
+  application:
+    name: ms-class
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
 
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
